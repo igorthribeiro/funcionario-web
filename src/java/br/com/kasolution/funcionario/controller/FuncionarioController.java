@@ -31,6 +31,19 @@ public class FuncionarioController {
         return "formulario-funcionario";
     }
     
+    @RequestMapping("mostraFuncionario")
+    public String mostraFuncionario(int id, Model model) {
+        Funcionario funcionario;
+        try (FuncionarioDao dao = new FuncionarioDao()) {
+            funcionario = dao.buscarId(id);
+            model.addAttribute("funcionario", funcionario);
+            return "formulario-funcionario";
+        } catch (DaoException e) {
+            System.out.println("Erro ao buscar funcionário! " + e.getMessage());
+            throw new RuntimeException(e);
+        }
+    }
+    
     @RequestMapping("salvaFuncionario")
     public String salva(Funcionario funcionario) {
         try (FuncionarioDao dao = new FuncionarioDao()) {

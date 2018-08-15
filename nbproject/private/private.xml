@@ -4,7 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/igordev/NetBeansProjects/funcionario-web/web/WEB-INF/web.xml</file>
+            <file>file:/home/igordev/NetBeansProjects/funcionario-web/web/WEB-INF/dispatcher-servlet.xml</file>
             <file>file:/home/igordev/NetBeansProjects/funcionario-web/src/java/br/com/kasolution/funcionario/controller/FuncionarioController.java</file>
+            <file>file:/home/igordev/NetBeansProjects/funcionario-web/web/WEB-INF/jsp/index.jsp</file>
         </group>
     </open-files>
 </project-private>
