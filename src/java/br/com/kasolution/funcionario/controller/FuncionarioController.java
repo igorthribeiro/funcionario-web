@@ -32,11 +32,11 @@ public class FuncionarioController {
     }
     
     @RequestMapping("mostraFuncionario")
-    public String mostraFuncionario(int id, Model model) {
-        Funcionario funcionario;
+    public String mostraFuncionario(Funcionario funcionario, Model model) {
+        Funcionario funcionarioBusca = new Funcionario();
         try (FuncionarioDao dao = new FuncionarioDao()) {
-            funcionario = dao.buscarId(id);
-            model.addAttribute("funcionario", funcionario);
+            funcionarioBusca = dao.buscarId(funcionario.getCodigo());
+            model.addAttribute("funcionario", funcionarioBusca);
             return "formulario-funcionario";
         } catch (DaoException e) {
             System.out.println("Erro ao buscar funcionário! " + e.getMessage());
@@ -47,7 +47,11 @@ public class FuncionarioController {
     @RequestMapping("salvaFuncionario")
     public String salva(Funcionario funcionario) {
         try (FuncionarioDao dao = new FuncionarioDao()) {
-            dao.salvar(funcionario);
+            if (funcionario.getCodigo() == 0) {
+                dao.salvar(funcionario);
+            } else {
+                dao.atualizar(funcionario);
+            }
         } catch (DaoException e) {
             System.out.println("Erro ao gravar! " + e.getMessage());
             throw new RuntimeException(e);

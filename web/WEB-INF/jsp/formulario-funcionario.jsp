@@ -16,29 +16,30 @@
             <table>
                 <tr>
                     <td>Nome:</td>
-                    <td><input type="text" name="nome" /></td>
+                    <td><input type="text" name="nome" value="${funcionario.nome}"/></td>
                 </tr>
                 <tr>
                     <td>Sexo:</td>
-                    <td><input type="text" name="sexo" /></td>
+                    <td><input type="text" name="sexo" value="${funcionario.sexo}"/></td>
                 </tr>
                 <tr>
                     <td>Idade:</td>
-                    <td><input type="text" name="idade" /></td>
+                    <td><input type="text" name="idade" value="${funcionario.idade}"/></td>
                 </tr>
                 <tr>
                     <td>Cidade:</td>
-                    <td><input type="text" name="cidade" /></td>
+                    <td><input type="text" name="cidade" value="${funcionario.cidade}"/></td>
                 </tr>
                 <tr>
                     <td>UF:</td>
-                    <td><input type="text" name="estado" /></td>
+                    <td><input type="text" name="estado" value="${funcionario.estado}"/></td>
                 </tr>
                 <tr>
                     <td>Sal&aacute;rio:</td>
-                    <td><input type="text" name="salario" /></td>
+                    <td><input type="text" name="salario" value="${funcionario.salario}"/></td>
                 </tr>
             </table><br />
+            <input type="hidden" name="codigo" value="${funcionario.codigo}" />
             <input type="submit" value="Gravar" />
         </form><br /><br />
         <a href="/funcionario-web">voltar para o menu</a>

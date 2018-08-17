@@ -36,6 +36,7 @@
                     <td>${f.estado}</td>
                     <td align="right"><fmt:formatNumber type="currency" value="${f.salario}" /></td>
                     <td><a href="removeFuncionario?codigo=${f.codigo}">Remover</a></td>
+                    <td><a href="mostraFuncionario?codigo=${f.codigo}">Alterar</a></td>
                 </tr>
             </c:forEach>
         </table><hr />
