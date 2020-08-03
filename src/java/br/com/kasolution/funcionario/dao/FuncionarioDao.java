@@ -39,11 +39,11 @@ public class FuncionarioDao implements Dao<Funcionario> {
     private Connection con;
 
     public FuncionarioDao() {
-        String url = "jdbc:mysql://localhost:3306/HR";
+        String url = "jdbc:mysql://localhost:3306/HRWEB?useTimezone=true&serverTimezone=UTC";
         String username = "root";
-        String password = "";
+        String password = "oracle_4U";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, username, password);
         } catch (SQLException | ClassNotFoundException ex) {
             System.out.println("Erro ao obter conexão com o MySQL ! " + ex.getMessage());

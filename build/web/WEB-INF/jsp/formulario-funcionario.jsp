@@ -4,6 +4,7 @@
     Author     : igordev
 --%>
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,7 +12,7 @@
         <title>Funcion&aacute;rio</title>
     </head>
     <body>
-        <form action="salvaFuncionario" method="post">
+        <form action="salvaFuncionario" method="POST">
             <h1>Funcion&aacute;rio</h1><hr />
             <table>
                 <tr>
@@ -39,7 +40,9 @@
                     <td><input type="text" name="salario" value="${funcionario.salario}"/></td>
                 </tr>
             </table><br />
-            <input type="hidden" name="codigo" value="${funcionario.codigo}" />
+            <c:if test="${not empty funcionario.codigo}">
+                <input type="hidden" name="codigo" value="${funcionario.codigo}" />
+            </c:if>
             <input type="submit" value="Gravar" />
         </form><br /><br />
         <a href="/funcionario-web">voltar para o menu</a>
