@@ -6,6 +6,7 @@
 package br.com.kasolution.funcionario.dao;
 
 import br.com.kasolution.funcionario.modelo.Funcionario;
+import br.com.kasolution.util.Parametrizador;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -39,11 +40,12 @@ public class FuncionarioDao implements Dao<Funcionario> {
     private Connection con;
 
     public FuncionarioDao() {
-        String url = "jdbc:mysql://localhost:3306/HRWEB?useTimezone=true&serverTimezone=UTC";
-        String username = "root";
-        String password = "oracle_4U";
+        Parametrizador p = Parametrizador.getInstance();
+        String url = p.get("url");
+        String username = p.get("usuario");
+        String password = p.get("senha");
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName(p.get("driver"));
             con = DriverManager.getConnection(url, username, password);
         } catch (SQLException | ClassNotFoundException ex) {
             System.out.println("Erro ao obter conexão com o MySQL ! " + ex.getMessage());

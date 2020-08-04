@@ -3,11 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/igordev/Área%20de%20Trabalho/java-exemplos/funcionario-web/src/java/br/com/kasolution/funcionario/dao/FuncionarioDao.java</file>
-            <file>file:/home/igordev/Área%20de%20Trabalho/java-exemplos/funcionario-web/web/WEB-INF/jsp/formulario-funcionario.jsp</file>
+            <file>file:/home/igordev/Área%20de%20Trabalho/java-exemplos/funcionario-web/web/WEB-INF/jsp/index.jsp</file>
             <file>file:/home/igordev/Área%20de%20Trabalho/java-exemplos/funcionario-web/web/WEB-INF/jsp/lista-funcionarios.jsp</file>
-            <file>file:/home/igordev/Área%20de%20Trabalho/java-exemplos/funcionario-web/src/java/br/com/kasolution/funcionario/modelo/Funcionario.java</file>
-            <file>file:/home/igordev/Área%20de%20Trabalho/java-exemplos/funcionario-web/src/java/br/com/kasolution/funcionario/controller/FuncionarioController.java</file>
         </group>
     </open-files>
 </project-private>
