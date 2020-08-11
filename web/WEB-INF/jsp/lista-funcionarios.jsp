@@ -9,37 +9,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="res/css/funcionario.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lista</title>
-        <style>
-            table.paleBlueRows {
-                font-family: Verdana, Geneva, sans-serif;
-                border: 1px solid #FFFFFF;
-                text-align: center;
-                border-collapse: collapse;
-            }
-            table.paleBlueRows td, table.paleBlueRows th {
-                border: 1px solid #909090;
-                padding: 3px 2px;
-            }
-            table.paleBlueRows tbody td {
-                font-size: 13px;
-            }
-            table.paleBlueRows tr:nth-child(even) {
-                background: #D0E4F5;
-            }
-            table.paleBlueRows thead {
-                background: #0B6FA4;
-                border-bottom: 5px solid #909090;
-            }
-            table.paleBlueRows thead th {
-                font-size: 17px;
-                font-weight: bold;
-                color: #FFFFFF;
-                text-align: center;
-                border-left: 2px solid #909090;
-            }
-        </style>
     </head>
     <body>
         <h1>Lista de funcion&aacute;rios</h1><hr />
